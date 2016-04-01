@@ -1,5 +1,5 @@
 {
-  "name": "notifyByECG",
+  "name": "panelAplicaciones",
   "version": "0.0.1",
   "dependencies": {
     "body-parser": "^1.9.2",

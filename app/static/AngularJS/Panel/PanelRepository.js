@@ -1,13 +1,11 @@
-var pagoUrl = global_settings.urlCORS + '/api/pagoapi/';
+var pagoUrl = global_settings.urlCORS + 'api/seguridadapi/';
 
-registrationModule.factory('PanelRepository', function ($http) {
+registrationModule.factory('panelRepository', function ($http) {
     return {
          getAplicaciones: function (id) {
-        return $http({
-            method: 'GET',
-            url: pagoUrl,
-            params: { id: '1|' + id }
-         });           
-        }
+        	return $http.get( pagoUrl + 'see/' + 1);
+
+         }           
+        
     };
 });

@@ -1,3 +1,3 @@
  module.exports = {
- 	push: require('./controllers/push'),
- }
+ 	seguridadapi: require('./controllers/seguridad'),
+ }	

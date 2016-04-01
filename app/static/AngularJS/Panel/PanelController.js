@@ -5,14 +5,14 @@
 // -- Modificó: 
 // -- Fecha: 
 // -- =============================================
-registrationModule.controller('PanelController', function($scope, alertFactory){
+registrationModule.controller('panelController', function($scope, alertFactory, panelRepository){
 	
 	$scope.idUsuario = 4;
 	$scope.init = function(){
 		
 		$('#ca-container').contentcarousel();
 
-    	PanelRepository.getAplicaciones($scope.idEmpleado)
+    	panelRepository.getAplicaciones($scope.idUsuario)
     		.then(function successCallback(response) {
 
 			    $scope.Aplicaciones = response.data;
