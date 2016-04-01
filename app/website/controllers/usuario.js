@@ -1,18 +1,18 @@
-var SeguridadView = require('../views/seguridad'),
-SeguridadModel = require('../models/seguridad');
+var UsuarioView = require('../views/usuario'),
+	UsuarioModel = require('../models/usuario');
 
-var Seguridad = function(config){
+var Usuario = function(config){
 	this.config = config || {};
 
-	this.view = new SeguridadView();
-	this.model = new SeguridadModel({ parameters : this.config.parameters});
+	this.view = new UsuarioView();
+	this.model = new UsuarioModel({ parameters : this.config.parameters});
 
 	this.response = function(){
 		this[this.config.funcionalidad](this.config.req,this.config.res,this.config.next);
 	}
 }
 
-Seguridad.prototype.get_see_data = function(req,res,next){
+Usuario.prototype.get_see_data = function(req,res,next){
 
 	//Objeto que almacena la respuesta del Model
 	var object = {};
@@ -34,4 +34,4 @@ Seguridad.prototype.get_see_data = function(req,res,next){
 	});
 }
 
-module.exports = Seguridad;
+module.exports = Usuario;
