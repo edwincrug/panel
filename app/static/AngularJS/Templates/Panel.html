@@ -1,12 +1,21 @@
+<!--
+ =============================================
+ Author:      Fernando Alvarado Luna
+ Create date: 01/04/2016
+ Description: Carrusel de aplicaciones
+ Modificó: 
+ Fecha: 
+ =============================================
+-->
+
 <div class="container" ng-init="init()">
             <h1 >Bienvenido {{empleado[0].nombre}}</h1>
             <h3 >{{empleado[0].correo}}</h3>
             <div id="ca-container" class="ca-container">
                 <div class="ca-wrapper">
-                <!--FAL ng repeat-->
                     <div class="ca-item ca-item-{{Aplicacion.idAplicacion}}"  ng-repeat="Aplicacion in Aplicaciones">
                         <div class="ca-item-main">
-                            <a title="{{Aplicacion.nombre}}" href="http://{{Aplicacion.url}}"><img src="../images/{{Aplicacion.imagen}}" alt="{{Aplicacion.nombre}}" /></a>
+                            <img src="../images/{{Aplicacion.imagen}}" alt="{{Aplicacion.nombre}}" ng-click="openWindow(Aplicacion.url,Aplicacion.nombre)" />
                             <h3>{{Aplicacion.nombre}}</h3>
                             <h4>
                                 <span class="ca-quote">&ldquo;</span>
