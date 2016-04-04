@@ -15,7 +15,9 @@
                 <div class="ca-wrapper">
                     <div class="ca-item ca-item-{{Aplicacion.idAplicacion}}"  ng-repeat="Aplicacion in Aplicaciones">
                         <div class="ca-item-main">
-                            <img src="../images/{{Aplicacion.imagen}}" alt="{{Aplicacion.nombre}}" ng-click="openWindow(Aplicacion.url,Aplicacion.nombre)" />
+                            <div id="liga-open-win">
+                                <img src="../images/{{Aplicacion.imagen}}" alt="{{Aplicacion.nombre}}" ng-click="openWindow(Aplicacion.url,Aplicacion.nombre)" />
+                            </div>
                             <h3>{{Aplicacion.nombre}}</h3>
                             <h4>
                                 <span class="ca-quote">&ldquo;</span>
