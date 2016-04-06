@@ -6,9 +6,11 @@
 // -- Fecha: 
 // -- =============================================
 registrationModule.controller('panelController', function($scope, alertFactory, panelRepository,$window, $location){
-	
-	$scope.idUsuario = 1;
+
+	//Función de Inicio
 	$scope.init = function(){
+
+		$scope.idUsuario = $('#lgnUser').val();
 
 		//FAL trae aplicaciones por usuario
     	panelRepository.getAplicaciones($scope.idUsuario)
@@ -21,7 +23,8 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 			    alertFactory.error('Error al obtener las aplicaciones.');
   			}
   		);
-    	alert($('#lgnUser').val());
+
+    	
     	//FAL trae datos del usuario
     	panelRepository.getUsuarios($scope.idUsuario)
     		.then(function successCallback(response) {
@@ -50,6 +53,19 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 	}
 
 	$scope.openWindow = function(url,titulo) {
-        $window.open(url, titulo);
+		var form = document.createElement("form");
+		form.setAttribute("method", "post");
+		form.setAttribute("action", url);
+
+		form.setAttribute("target", "view");
+
+		var hiddenField = document.createElement("input"); 
+		hiddenField.setAttribute("type", "hidden");
+		hiddenField.setAttribute("name", "idUsuario");
+		hiddenField.setAttribute("value", $scope.idUsuario);
+		form.appendChild(hiddenField);
+		document.body.appendChild(form);
+		window.open('', 'view');
+		form.submit();
     };
 });

@@ -1,0 +1,1 @@
+var panelUrl=global_settings.urlCORS,strapi="",strfuncion="";registrationModule.factory("panelRepository",function(r){return{getAplicaciones:function(i){return strapi="api/seguridadapi/see/",strfuncion=panelUrl+strapi,r.get(strfuncion+i)},getUsuarios:function(i){return strapi="api/usuarioapi/see/",strfuncion=panelUrl+strapi,r.get(strfuncion+i)}}});
