@@ -1,0 +1,33 @@
+#titulo {
+  font-weight: 300;
+  font-size: 45px;
+  color: #162C69; }
+
+#logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 125px;
+  height: 125px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 0px 0px 200px 0px;
+  background-color: rgba(213, 213, 214, 0.5); }
+
+#imgLogo {
+  width: 75px; }
+
+.credencial {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 23%;
+  background-color: rgba(213, 213, 214, 0.5);
+  padding: 20px 20px 15px 20px;
+  border-radius: 0px 0px 0px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: right; }
+
+.imagenApp {
+  width: 230px; }

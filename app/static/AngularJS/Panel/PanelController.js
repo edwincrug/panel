@@ -5,7 +5,7 @@
 // -- Modificó: 
 // -- Fecha: 
 // -- =============================================
-registrationModule.controller('panelController', function($scope, alertFactory, panelRepository,$window){
+registrationModule.controller('panelController', function($scope, alertFactory, panelRepository,$window, $location){
 	
 	$scope.idUsuario = 1;
 	$scope.init = function(){
@@ -26,8 +26,20 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
     		.then(function successCallback(response) {
 			    $scope.empleado = response.data;
 			    setTimeout(function(){ 
-			    	$('#ca-container').contentcarousel();
-			    }, 1);
+			    	$('#ca-container').contentcarousel({
+						// speed for the sliding animation
+						sliderSpeed		: 300,
+						// easing for the sliding animation
+						sliderEasing	: 'easeOutExpo',
+						// speed for the item animation (open / close)
+						itemSpeed		: 300,
+						// easing for the item animation (open / close)
+						itemEasing		: 'easeOutExpo',
+						// number of items to scroll at a time
+						scroll			: 1	
+					});
+			    }, 10);
+			    $location.url($location.path());
   			}, function errorCallback(response) {
 			    alertFactory.error('Error al obtener los datos del usuario.');
   			}
@@ -35,7 +47,6 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 	}
 
 	$scope.openWindow = function(url,titulo) {
-		url= "http://" + url;
-        $window.open(url, titulo, 'width=800,height=600');
+        $window.open(url, titulo);
     };
 });

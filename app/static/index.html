@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Circular Content Carousel with jQuery</title>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Circular Content Carousel with jQuery" />
-        <meta name="keywords" content="jquery, conent slider, content carousel, circular, expanding, sliding, css3" />
-        <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
-        <link href="css/bootstrap.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" media="all" />
-        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-       <!--  <script src="js/libs/bootstrap/bootstrap.js"></script> -->
-        <script type="text/javascript" src="js/libs/jQuery/jquery.easing.1.3.js"></script>
-        <!-- the jScrollPane script -->
-        <script type="text/javascript" src="js/libs/jQuery/jquery.mousewheel.js"></script>
-        <script type="text/javascript" src="js/libs/jQuery/jquery.contentcarousel.js"></script>
-    </head>
-    <body ng-app="registrationModule">
-       <div ng-view></div> 
-        
+<html lang="es">
+<head>
+    <title>Panel de Acceso a Aplicaciones</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Circular Content Carousel with jQuery" />
+    <meta name="keywords" content="jquery, conent slider, content carousel, circular, expanding, sliding, css3" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link href="css/bootstrap.css" rel="stylesheet" />
 
-        <!--Interface de usuario-->
-        <script src="js/libs/toastr/toastr.min.js"></script>
+    <!-- Libreria de Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900italic' rel='stylesheet' type='text/css'>
+    <!-- Hojas de estilos -->
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/panel.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" media="all" />
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/jQuery/jquery.easing.1.3.js"></script>
+    <!-- the jScrollPane script -->
+    <script type="text/javascript" src="js/libs/jQuery/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="js/libs/jQuery/jquery.contentcarousel.js"></script>
+</head>
+<body ng-app="registrationModule">
+ <div ng-view></div> 
 
-        <!-- Librerias Angular-->
-        <script src="js/libs/angular/angular.min.js"></script>
-        <script src="js/libs/angular/angular-route.min.js"></script>
-        <!--<script src="js/libs/angular/angular-animate.min.js"></script>-->
-        <!-- <script src="js/libs/angular/ui-bootstrap-tpls.min.js"></script> -->
-        <!--<script src="js/libs/angular/angular-local-storage.min.js"></script>-->
+[[ user.idUsuario ]]
+ <!--Interface de usuario-->
+ <script src="js/libs/toastr/toastr.min.js"></script>
 
-        <!--Funciones Comunes-->
-        <script src="confront.js"></script>
-        <script src="AngularJS/registrationModule.js"></script>
+ <!-- Librerias Angular-->
+ <script src="js/libs/angular/angular.min.js"></script>
+ <script src="js/libs/angular/angular-route.min.js"></script>
 
-        <script src="AngularJS/alertFactory.js"></script>
+ <!--Funciones Comunes-->
+ <script src="confront.js"></script>
+ <script src="AngularJS/registrationModule.js"></script>
 
-        <!--Controllers-->
-        <script src="AngularJS/Panel/panelRepository.js"></script>
-        <script src="AngularJS/Panel/panelController.js"></script>
-       
-    </body>
+ <script src="AngularJS/alertFactory.js"></script>
+
+ <!--Controllers-->
+ <script src="AngularJS/Panel/panelRepository.js"></script>
+ <script src="AngularJS/Panel/panelController.js"></script>
+
+</body>
 </html>      

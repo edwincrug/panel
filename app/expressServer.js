@@ -20,7 +20,7 @@ var ExpressServer = function(config){
 
     this.expressServer.engine('html', swig.renderFile);
     this.expressServer.set('view engine', 'html');
-    this.expressServer.set('views', __dirname + '/website/views/templates');
+    this.expressServer.set('views', __dirname + '/static/');
     swig.setDefaults({varControls:['[[',']]']});
 
     if(env == 'development'){
@@ -40,12 +40,6 @@ var ExpressServer = function(config){
         }
     } 
 
-    this.expressServer.get('/hola', function(req, res){
-        res.writeHead(200, {'content-type': 'text/plain'});
-        res.write('Hola, Mundo!');
-        res.end();
-    });
-
     //Servimos el archivo angular
     this.expressServer.get('/', function(req, res){
         res.sendfile('app/static/index.htm');
@@ -53,7 +47,9 @@ var ExpressServer = function(config){
 
     //Recibo las variables de login
     this.expressServer.post('*', function(req, res){
-        res.sendfile('app/static/index.htm');
+        var user = { idUsuario: req.body.envioIdUsu };
+        res.render('index', { user });
+        // res.sendfile('app/static/index.htm');
     });
 
 };
