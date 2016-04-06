@@ -26,10 +26,13 @@
     <script type="text/javascript" src="js/libs/jQuery/jquery.mousewheel.js"></script>
     <script type="text/javascript" src="js/libs/jQuery/jquery.contentcarousel.js"></script>
 </head>
-<body ng-app="registrationModule">
+<body ng-app="registrationModule" ng-init="">
  <div ng-view></div> 
+ <!-- Usuario autenticado -->
+ [[ user.idUsuario ]]
+ <input type="hidden" id="lgnUser" value="[[ user.idUsuario ]]">
 
-[[ user.idUsuario ]]
+
  <!--Interface de usuario-->
  <script src="js/libs/toastr/toastr.min.js"></script>
 

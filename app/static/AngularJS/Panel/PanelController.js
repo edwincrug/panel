@@ -21,6 +21,7 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 			    alertFactory.error('Error al obtener las aplicaciones.');
   			}
   		);
+    	alert($('#lgnUser').val());
     	//FAL trae datos del usuario
     	panelRepository.getUsuarios($scope.idUsuario)
     		.then(function successCallback(response) {
@@ -39,11 +40,13 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 						scroll			: 1	
 					});
 			    }, 10);
-			    $location.url($location.path());
+
   			}, function errorCallback(response) {
 			    alertFactory.error('Error al obtener los datos del usuario.');
   			}
   		);
+
+    	
 	}
 
 	$scope.openWindow = function(url,titulo) {
