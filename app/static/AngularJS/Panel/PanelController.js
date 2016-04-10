@@ -57,7 +57,7 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 		form.setAttribute("method", "post");
 		form.setAttribute("action", url);
 
-		//form.setAttribute("target", "view");
+		form.setAttribute("target", "_blank");
 
 		var hiddenField = document.createElement("input"); 
 		hiddenField.setAttribute("type", "hidden");
