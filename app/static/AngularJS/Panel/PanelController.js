@@ -65,7 +65,7 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 		hiddenField.setAttribute("value", $scope.idUsuario);
 		form.appendChild(hiddenField);
 		document.body.appendChild(form);
-		window.open('', '_blank');
+		window.open();
 		form.submit();
     };
 });
