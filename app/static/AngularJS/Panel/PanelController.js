@@ -57,7 +57,7 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 		form.setAttribute("method", "post");
 		form.setAttribute("action", url);
 
-		form.setAttribute("target", "view");
+		//form.setAttribute("target", "view");
 
 		var hiddenField = document.createElement("input"); 
 		hiddenField.setAttribute("type", "hidden");
@@ -65,7 +65,7 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
 		hiddenField.setAttribute("value", $scope.idUsuario);
 		form.appendChild(hiddenField);
 		document.body.appendChild(form);
-		window.open('', 'view');
+		window.open('', '_blank');
 		form.submit();
     };
 });
