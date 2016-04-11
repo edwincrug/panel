@@ -17,7 +17,9 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
     		.then(function successCallback(response) {
 			    $scope.Aplicaciones = response.data;
 			    setTimeout(function(){ 
-			    	$('#ca-container').contentcarousel();
+			    	 $('#dg-container').gallery({
+						autoplay: true
+					 });
 			    }, 1);
   			}, function errorCallback(response) {
 			    alertFactory.error('Error al obtener las aplicaciones.');
@@ -29,20 +31,6 @@ registrationModule.controller('panelController', function($scope, alertFactory, 
     	panelRepository.getUsuarios($scope.idUsuario)
     		.then(function successCallback(response) {
 			    $scope.empleado = response.data;
-			    setTimeout(function(){ 
-			    	$('#ca-container').contentcarousel({
-						// speed for the sliding animation
-						sliderSpeed		: 300,
-						// easing for the sliding animation
-						sliderEasing	: 'easeOutExpo',
-						// speed for the item animation (open / close)
-						itemSpeed		: 300,
-						// easing for the item animation (open / close)
-						itemEasing		: 'easeOutExpo',
-						// number of items to scroll at a time
-						scroll			: 1	
-					});
-			    }, 10);
 
   			}, function errorCallback(response) {
 			    alertFactory.error('Error al obtener los datos del usuario.');
