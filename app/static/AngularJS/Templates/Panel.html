@@ -20,24 +20,21 @@
     </div>
     <br>
     <br>
-
-
-            <section id="dg-container" class="dg-container">
-                <div class="dg-wrapper">
-                    <a ng-repeat="Aplicacion in Aplicaciones" ng-click="openWindow(Aplicacion.url,Aplicacion.nombre)">
-                        <img src="../images/{{Aplicacion.imagen}}" alt="{{Aplicacion.nombre}}" class="imagenApp">
-                        <div> <span class="textApp"> {{Aplicacion.nombre}}</span></div>
-                    </a>
-                </div>
-                <nav>    
-                    <span class="dg-prev">&lt;</span>
-                    <span class="dg-next">&gt;</span>
-                </nav
-            </section>
-
-
-
+    <br>
+    <br>
+    <section id="dg-container" class="dg-container">
+        <div class="dg-wrapper">
+            <a ng-repeat="Aplicacion in Aplicaciones" ng-click="openWindow(Aplicacion.url,Aplicacion.nombre)">
+                <img src="../images/{{Aplicacion.imagen}}" alt="{{Aplicacion.nombre}}" class="imagenApp">
+                <div> <span class="textApp"> {{Aplicacion.nombre}}</span></div>
+            </a>
+        </div>
+        <nav>    
+            <span class="dg-prev">&lt;</span>
+            <span class="dg-next">&gt;</span>
+            </nav
+        </section>
 
         <h5 class="copy">2016 - Grupo Andrade</h5>
 
-</div>
+    </div>
