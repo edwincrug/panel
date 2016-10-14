@@ -1,60 +1,62 @@
 #titulo {
-  font-weight: 300;
-  font-size: 45px;
-  color: #162C69;
-  width: 100%;
-  text-align: center; }
-
+    font-weight: 300;
+    font-size: 45px;
+    color: #162C69;
+    width: 100%;
+    text-align: left;
+}
 #logo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 125px;
-  height: 125px;
-  padding-top: 10px;
-  padding-left: 10px;
-  border-radius: 0px 0px 200px 0px;
-  background-color: rgba(213, 213, 214, 0.5); }
-
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 125px;
+    height: 125px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 0px 0px 200px 0px;
+    background-color: rgba(213, 213, 214, 0.5);
+}
 #imgLogo {
-  width: 75px; }
-
+    width: 53px;
+    margin-left: 57px;
+}
 .credencial {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 23%;
-  background-color: rgba(213, 213, 214, 0.5);
-  padding: 20px 48px 15px 20px;
-  border-radius: 0px 0px 0px 10px;
-  font-size: 15px;
-  font-weight: 500;
-  text-align: right; }
-
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 23%;
+    background-color: rgba(213, 213, 214, 0.5);
+    padding: 20px 48px 15px 20px;
+    border-radius: 0px 0px 0px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: right;
+}
 .imagenApp {
-  width: 481px;
-  height: 292px; }
-
+    width: 481px;
+    height: 292px;
+}
 #avatar {
-  width: 40px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-top: 6px;
-  margin-right: 4px;
-  border-radius: 25px; }
-
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 6px;
+    margin-right: 4px;
+    border-radius: 25px;
+}
 .textApp {
-  font-weight: 300;
-  font-size: 25px;
-  font-style: normal;
-  cursor: pointer;
-  margin-top: -25px;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  left: 0; }
-
+    font-weight: 300;
+    font-size: 25px;
+    font-style: normal;
+    cursor: pointer;
+    margin-top: -25px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
 .copy {
-  color: #D8D8D8;
-  font-weight: 100; }
+    color: #D8D8D8;
+    font-weight: 100;
+}
