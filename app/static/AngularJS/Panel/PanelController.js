@@ -38,18 +38,27 @@ registrationModule.controller('panelController', function ($scope, $rootScope, a
 
     }
 
-    $scope.openWindow = function (url, titulo) {
+    $scope.openWindow = function (url, titulo, requiereAutenticacion) {
         var form = document.createElement("form");
-        form.setAttribute("method", "post");
+        if (requiereAutenticacion == 1) {
+            form.setAttribute("method", "post");
+        } else {
+            form.setAttribute("method", "get");
+        }
+
         form.setAttribute("action", url);
 
         form.setAttribute("target", titulo);
 
-        var hiddenField = document.createElement("input");
-        hiddenField.setAttribute("type", "hidden");
-        hiddenField.setAttribute("name", "idUsuario");
-        hiddenField.setAttribute("value", $rootScope.idUsuario);
-        form.appendChild(hiddenField);
+        if (requiereAutenticacion == 1) {
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "idUsuario");
+            hiddenField.setAttribute("value", $rootScope.idUsuario);
+            form.appendChild(hiddenField);
+        }
+
+
         document.body.appendChild(form);
         window.open('', titulo);
         form.submit();
